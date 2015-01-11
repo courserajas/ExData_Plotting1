@@ -7,7 +7,7 @@ d <- data[data$Date == "1/2/2007" | data$Date == "2/2/2007", c("Date", "Time", "
 # add a column, which combines date and time in native R format
 d$DateTime <- as.POSIXct(paste(d$Date, d$Time), format="%d/%m/%Y %H:%M:%S")
 
-# open device to create png file. transparent background as in examles in github
+# open device to create png file. transparent background as in examples in github
 png(filename = "plot2.png", width = 480, height = 480, bg = "transparent")
 
 # create the plot with appropriate style
